@@ -116,39 +116,39 @@ UI displays risk meter and recommendation
 
 ## 🎯 Use Cases
 
-Smart e-commerce checkout assistant
+● Smart e-commerce checkout assistant
 
-Financial wellness applications
+● Financial wellness applications
 
-Impulse buying prevention
+● Impulse buying prevention
 
-Behavioral spending analytics
+● Behavioral spending analytics
 
 ## 🚀 Future Improvements
 
-Supabase user behavior storage
+⇒ Supabase user behavior storage
 
-Personalized regret modeling
+⇒ Personalized regret modeling
 
-ONNX optimization
+⇒ ONNX optimization
 
-LLM-generated explanations
+⇒ LLM-generated explanations
 
-Real product API integration
+⇒ Real product API integration
 
 ## 🏆 Highlights
 
-Full-stack AI integration
+✔ Full-stack AI integration
 
-Real ML training pipeline
+✔ Real ML training pipeline
 
-TorchScript production deployment
+✔ TorchScript production deployment
 
-Microservice architecture
+✔ Microservice architecture
 
-Zero-budget scalable setup
+✔ Zero-budget scalable setup
 
-AMD ROCm compatible
+✔ AMD ROCm compatible
 
 ## 👨‍💻 Author
 
