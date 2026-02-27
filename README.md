@@ -1,36 +1,241 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 🚀 Future-Regret Minimizer Shopping AI
 
-## Getting Started
+An AI-powered web application that predicts post-purchase regret probability before checkout and suggests lower-risk alternatives to help users make smarter financial decisions.
 
-First, run the development server:
+## 🧠 Problem Statement
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
+Many consumers experience regret after purchases due to:
+
+Impulse buying
+
+Budget overspending
+
+Behavioral deviation from past spending
+
+Repeated return patterns
+
+This project aims to predict regret risk before purchase using machine learning and provide actionable recommendations.
+
+✨ Key Features
+
+🔮 Regret Probability Prediction (0–100%)
+
+💸 Budget Stress Score
+
+📉 Long-Term Satisfaction Estimate
+
+🧠 Behavioral explanation (“Why this score?”)
+
+🔁 AI-suggested lower-regret alternative
+
+⚡ Real-time ML inference
+
+🎨 Modern AI-style UI
+
+🏗 System Architecture
+Frontend (Next.js - Vercel)
+        ↓
+Next.js API Route
+        ↓
+FastAPI Inference Server
+        ↓
+PyTorch TorchScript Model
+Why Separate ML Server?
+
+Vercel serverless functions do not support full PyTorch runtime
+
+Enables scalable microservice architecture
+
+Industry-standard ML deployment pattern
+
+🛠 Tech Stack
+Frontend
+
+Next.js (App Router)
+
+TypeScript
+
+Tailwind CSS
+
+pnpm
+
+Backend (Inference)
+
+FastAPI
+
+PyTorch (TorchScript)
+
+Uvicorn
+
+ML Model
+
+PyTorch
+
+Multi-output regression
+
+Synthetic behavioral dataset
+
+AMD ROCm compatible
+
+Database (Planned)
+
+Supabase (Free tier)
+
+Deployment
+
+Vercel (Frontend)
+
+Render / Railway (ML backend)
+
+📊 Machine Learning Overview
+Input Features
+
+Product price
+
+User budget
+
+Past average spending
+
+Return rate
+
+Spending deviation
+
+Outputs
+
+Regret Probability (0–100%)
+
+Budget Stress Score (0–100%)
+
+Long-Term Satisfaction (derived as 100 − regret)
+
+Model Type
+
+Multi-output regression
+
+Fully connected neural network
+
+Trained on synthetic behavioral dataset
+
+Exported via TorchScript for production inference
+
+📁 Project Structure
+Future-Regret-Minimizer/
+│
+├── app/                  # Next.js frontend
+├── components/           # UI components
+├── lib/                  # Utility logic
+├── ml-model/             # Training code
+│   ├── dataset.py
+│   ├── model.py
+│   ├── train.py
+│   └── regret_model.pt
+│
+├── ml-inference/         # FastAPI server
+│   ├── main.py
+│   ├── requirements.txt
+│   └── regret_model.pt
+│
+└── README.md
+⚙️ Running Locally
+1️⃣ Start ML Inference Server
+cd ml-inference
+python -m uvicorn main:app --reload
+
+Runs at:
+
+http://127.0.0.1:8000
+
+Swagger Docs:
+
+http://127.0.0.1:8000/docs
+2️⃣ Start Frontend
 pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Runs at:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
+📈 Example Prediction
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Input:
 
-## Learn More
+{
+  "price": 20000,
+  "user_budget": 50000,
+  "past_avg_spending": 15000,
+  "return_rate": 0.2,
+  "spending_deviation": 0.3
+}
 
-To learn more about Next.js, take a look at the following resources:
+Output:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+{
+  "regret_probability": 19.57,
+  "budget_stress": 28.1,
+  "satisfaction": 80.43
+}
+🔍 How It Works
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+User enters product & financial data.
 
-## Deploy on Vercel
+Frontend sends request to backend.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+FastAPI loads TorchScript model.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Model predicts regret metrics.
+
+Business logic enforces logical constraints.
+
+UI displays:
+
+Risk meter
+
+Explanation
+
+Alternative recommendation
+
+🎯 Use Cases
+
+E-commerce decision support
+
+Financial wellness apps
+
+Impulse buying prevention tools
+
+Behavioral spending analytics
+
+Smart checkout assistants
+
+🚀 Future Improvements
+
+Real user behavioral tracking (Supabase)
+
+Personalized regret modeling per user
+
+Reinforcement learning adaptation
+
+ONNX optimization for lighter inference
+
+Real product scraping integration
+
+LLM-generated behavioral explanations
+
+🏆 Hackathon Value
+
+This project demonstrates:
+
+Full-stack AI integration
+
+Real ML model training
+
+TorchScript production deployment
+
+Microservice architecture
+
+Zero-budget scalable setup
+
+AMD ROCm compatible training
+
+👨‍💻 Author
+
+Siddhant Shitole
+AI & Embedded Systems Enthusiast
