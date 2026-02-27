@@ -1,0 +1,18 @@
+# Node
+node_modules
+.next
+out
+pnpm-lock.yaml
+
+# Python
+__pycache__
+*.pyc
+venv
+.env
+
+# Model weights (optional if large)
+*.pth
+*.pt
+
+# OS
+.DS_Store
