@@ -9,14 +9,26 @@ export default function Home() {
   const [result, setResult] = useState<PredictionResponse | null>(null)
 
   return (
-    <main className="min-h-screen p-10 max-w-2xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">
-        Future-Regret Minimizer Shopping AI
-      </h1>
+    <main className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white flex flex-col items-center px-6 py-16">
+      
+      <div className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+          Future-Regret Minimizer AI
+        </h1>
+        <p className="text-gray-400 mt-4 max-w-xl mx-auto">
+          Predict post-purchase regret before you checkout. Make smarter buying decisions with AI-powered financial behavior analysis.
+        </p>
+      </div>
 
-      <ProductForm onResult={setResult} />
+      <div className="w-full max-w-3xl bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">
+        <ProductForm onResult={setResult} />
+      </div>
 
-      {result && <ResultCard data={result} />}
+      {result && (
+        <div className="w-full max-w-3xl mt-10">
+          <ResultCard data={result} />
+        </div>
+      )}
     </main>
   )
 }

@@ -43,15 +43,43 @@ export default function ProductForm({ onResult }: Props) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <input name="name" placeholder="Product Name" onChange={handleChange} className="input" />
-      <input name="price" type="number" placeholder="Price" onChange={handleChange} className="input" />
-      <input name="userBudget" type="number" placeholder="Your Budget" onChange={handleChange} className="input" />
-      <input name="pastSpendingAverage" type="number" placeholder="Avg Past Spending" onChange={handleChange} className="input" />
-      <input name="returnRate" type="number" step="0.1" placeholder="Return Rate (0–1)" onChange={handleChange} className="input" />
-
-      <button type="submit" className="bg-black text-white px-4 py-2 rounded">
-        Analyze Regret Risk
-      </button>
+      <input
+  name="name"
+  placeholder="Product Name"
+  onChange={handleChange}
+  className="w-full bg-black/40 border border-gray-700 focus:border-cyan-400 outline-none px-4 py-3 rounded-lg"
+/>
+<input
+  name="Price"
+  placeholder="Price"
+  onChange={handleChange}
+  className="w-full bg-black/40 border border-gray-700 focus:border-cyan-400 outline-none px-4 py-3 rounded-lg"
+/>
+<input
+  name="userBudget"
+  placeholder="Your Budget"
+  onChange={handleChange}
+  className="w-full bg-black/40 border border-gray-700 focus:border-cyan-400 outline-none px-4 py-3 rounded-lg"
+/>
+<input
+  name="pastSpendingAverage"
+  placeholder="Avg Past Spending"
+  onChange={handleChange}
+  className="w-full bg-black/40 border border-gray-700 focus:border-cyan-400 outline-none px-4 py-3 rounded-lg"
+/>
+<input
+  name="returnRate"
+  placeholder="Return Rate (0-1)"
+  onChange={handleChange}
+  className="w-full bg-black/40 border border-gray-700 focus:border-cyan-400 outline-none px-4 py-3 rounded-lg"
+/>
+      
+   <button
+  type="submit"
+  className="w-full bg-gradient-to-r from-purple-500 to-cyan-500 hover:opacity-90 transition-all duration-300 py-3 rounded-lg font-semibold"
+>
+  Analyze with AI
+</button>
     </form>
   )
 }
