@@ -40,7 +40,7 @@ Follows industry AI deployment standards
 
 Next.js (App Router)
 
-TypeScript
+TypeScript/ Javascript
 
 Tailwind CSS
 
@@ -64,7 +64,7 @@ AMD ROCm compatible training
 
 # Deployment
 
-Vercel (Frontend)
+Vercel (Frontend) 
 
 Render / Railway (ML Backend)
 
