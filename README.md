@@ -32,7 +32,6 @@ Serverless platforms do not support full PyTorch runtime
 
 Enables scalable microservice design
 
-Follows industry AI deployment standards
 
 ## 🛠 Tech Stack
 
