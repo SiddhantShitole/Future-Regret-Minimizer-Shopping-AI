@@ -14,7 +14,7 @@ Many consumers regret purchases due to:
 
 ✔ Frequent return behavior
 
-This system predicts regret risk before checkout and provides actionable recommendations.
+This system predicts REGRETS risk before checkout and provides actionable recommendations.
 
 ## 🏗 System Architecture
 
