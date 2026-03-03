@@ -6,9 +6,9 @@ An AI-powered full-stack web application that predicts post-purchase regret prob
 
 Many consumers regret purchases due to:
 
-✔ Impulse buying
-
 ✔ Budget overspending
+
+✔ Impulse buying
 
 ✔ Spending pattern deviation
 
